@@ -1,0 +1,14 @@
+<form>
+    <label for="nome">Nome: </label>
+    <input type="text" name="nome" [(ngModel)]="client.Nome">
+    <br />
+    <label for="cpf">CPF: </label>
+    <input type="text" name="cpf" [(ngModel)]="client.cpf"> 
+     <div *ngIf="!client.Valido()">
+       CPF Inválido!
+     </div>
+    <div>
+      <input type="button" value="Salvar" (click)="salvar()">
+    </div>
+  
+  </form>
